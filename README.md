@@ -1,4 +1,4 @@
-# [Aplicacion de Gestion para Gaschile](http://gaschile.com)
+## [Aplicacion de Gestion para Gaschile](http://gaschile.com)
 
 Aplicacion de gestion tipo ERP, para la empresa chilena gaschile. Que consta de programacion modular y secuencial.
 algunas de las principales caracteristicas son:
