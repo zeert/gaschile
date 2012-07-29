@@ -4,10 +4,34 @@ class Login extends CI_Controller {
 
     public function index()
     {
+    	$data['main_content'] = 'login';
+    	$this->load->view('includes/template', $data);
+    }
 
-    	$data['title'] = 'Aplicacion de Gestion Gaschile 2012 :: Login de Usuarios';
+    function validate_credentials() {
+    	$this->load->model('usuarios_modelo');
+    	$query = $this->usuarios_modelo->validate();
 
-    	$this->load->view('login', $data);
+    	if ($query) 
+    	{
+    		$data = array(
+    			'username' => $this->input->post('username'),
+    			'is_logged_in' => true
+    		);
+
+    		$this->session->set_userdata($data);
+    		redirect('sitio/area_restringida');
+    	}
+
+    	else {
+
+    		$this->index();
+    	}
+    }
+
+    function logout() {
+    	$this->session->sess_destroy();
+    	$this->index();
     }
 
 }

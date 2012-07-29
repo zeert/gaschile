@@ -1,60 +1,16 @@
-<!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!-- Consider specifying the language of your content by adding the `lang` attribute to <html> -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
+<?php $this->load->view('includes/header'); ?>
 
-    <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-         More info: h5bp.com/i/378 -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<div id="login_form">
 
-    <title><?= $title ?></title>
-    <meta name="description" content="">
+    <h1>Login, Fool!</h1>
+    <?php 
+    echo form_open('login/validate_credentials');
+    echo form_input('username', 'Username');
+    echo form_password('password', 'Password');
+    echo form_submit('submit', 'Login');
+    echo form_close();
+    ?>
 
-    <!-- Mobile viewport optimized: h5bp.com/viewport -->
-    <meta name="viewport" content="width=device-width">
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
-    <link rel="stylesheet" href="<?= base_url();?>css/main.css">
-
-    <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
-
-    <!-- All JavaScript at the bottom, except this Modernizr build.
-         Modernizr enables HTML5 elements & feature detects for optimal performance.
-         Create your own custom Modernizr build: www.modernizr.com/download/ -->
-    <script src="<?= base_url();?>js/vendor/modernizr-2.6.1.min.js"></script>
-</head>
-<body>
-    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-         chromium.org/developers/how-tos/chrome-frame-getting-started -->
-    <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-
-    <!-- Add your site or application content here -->
-
-
-    <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
-
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-    <script src="//code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script>window.jQuery || document.write('<script src="<?= base_url();?>js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
-
-    <!-- scripts concatenated and minified via build script -->
-    <script src="<?= base_url();?>js/plugins.js"></script>
-    <script src="<?= base_url();?>js/main.js"></script>
-    <!-- end scripts -->
-
-    <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-         mathiasbynens.be/notes/async-analytics-snippet -->
-    <script>
-        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
-</body>
-</html>
+</div>
+<!-- end login_form-->
+<?php $this->load->view('includes/footer'); ?>
