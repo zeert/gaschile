@@ -50,3 +50,14 @@ publish
 # build script local files
 build/buildinfo.properties
 build/config/buildinfo.properties
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
