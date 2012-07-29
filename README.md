@@ -5,13 +5,13 @@ algunas de las principales caracteristicas son:
 
 ## Tecnologias
 
-* HTML5
+* [HTML5](http://es.wikipedia.org/wiki/HTML5)
 * Multi-Browser (Chrome, Opera, Safari, Firefox 3.6+, IE6+).
 * [PHP](http://php.com).
 * [Codeigniter](http://codeigniter.com).
 * Base de datos [MySql](http://mysql.com).
-* [Html5 Boilerplate](http://html5bp.com)
-* CSS 3
+* [Html5 Boilerplate](http://html5boilerplate.com)
+* [CSS3](http://es.wikipedia.org/wiki/Hojas_de_estilo_en_cascada#CSS3)
 
 ## Creado por:
 
