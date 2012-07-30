@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<title>404 Page Not Found</title>
+<title>404 No Encontrada</title>
 <style>
         ::-moz-selection {
             background: #b3d4fc;

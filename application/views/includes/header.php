@@ -19,8 +19,9 @@
     <meta name="viewport" content="width=device-width">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
-    <link rel="stylesheet" href="<?= base_url();?>css/main.css">
+<link rel="stylesheet" href="<?= base_url();?>css/style.css">
+<link rel="stylesheet" href="<?= base_url();?>css/light/theme.css" id="themestyle">
+    <!--<link rel="stylesheet" href="<?= base_url();?>css/main.css">-->
 
     <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
@@ -29,3 +30,4 @@
          Create your own custom Modernizr build: www.modernizr.com/download/ -->
     <script src="<?= base_url();?>js/vendor/modernizr-2.6.1.min.js"></script>
 </head>
+<body id="login">

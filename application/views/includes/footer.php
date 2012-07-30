@@ -14,5 +14,8 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
         s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
+    <script src="<?= base_url();?>js/wl_Alert.js"></script>
+
     </body>
 </html>

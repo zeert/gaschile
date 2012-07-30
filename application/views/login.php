@@ -1,16 +1,26 @@
 <?php $this->load->view('includes/header'); ?>
 
-<div id="login_form">
 
-    <h1>Login, Fool!</h1>
-    <?php 
-    echo form_open('login/validate_credentials');
-    echo form_input('username', 'Username');
-    echo form_password('password', 'Password');
-    echo form_submit('submit', 'Login');
-    echo form_close();
+    <?php
+    $usrname = array('name'=>'username','id'=>'username','value'=>''); 
+    $passwd = array('name'=>'password','id'=>'password','value'=>'');
+    $submit = array('name'=>'Submit','id'=>'submit','value'=>'Entrar', 'class'=>'fr submit');
     ?>
-
-</div>
-<!-- end login_form-->
-<?php $this->load->view('includes/footer'); ?>
+		</header>
+		<section id="content">
+			<?= form_open('login/validate_credentials'); ?>
+			<fieldset>
+				<section><label for="username">Usuario</label>
+					<div><?= form_input($usrname);?></div>
+				</section>
+				<section><label for="password">Clave</label>
+					<div><?= form_password($passwd);?></div>
+					<div><input type="checkbox" id="remember" name="remember"><label for="remember" class="checkbox">remember me</label></div>
+				</section>
+				<section>
+					<div><?= form_submit($submit);?></div>
+				</section>
+			</fieldset>
+		<?= form_close(); ?>
+		</section>
+		<footer>Gaschile 2012</footer>
