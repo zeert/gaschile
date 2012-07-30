@@ -564,7 +564,19 @@ AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
 # Don't prepend to error (doesn't accept empty string, use whitespace if you need)
 # php_value error_append_string " "
 
+
+
 # Increase cookie security
 <IfModule php5_module>
   php_value session.cookie_httponly true
 </IfModule>
+
+
+######### Configuracion Index.php Codeigniter ############
+ RewriteEngine On   
+ 
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteRule ^(.*)$ index.php/$1 [L]
+ 
+ ErrorDocument 404 /index.php
